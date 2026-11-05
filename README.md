@@ -50,6 +50,26 @@ We tested a 1st-gen TapTap on a home network, months after the cloud shutdown:
 The box used to download those from Asante's cloud. Until that's solved, a computer or spare phone on
 your Wi-Fi runs the show live, and the music plays from **any speaker you like**.
 
+## What's inside (from the public FCC filing)
+
+The TapTap's FCC ID is **TFJ-TAPTAP** (Uniform Industrial Corp., "RF Music Player", approved December 2016).
+The filing is public, including photos of the inside: **[fccid.io/TFJ-TAPTAP](https://fccid.io/TFJ-TAPTAP)**.
+
+What the photos show:
+
+- **A built-in speaker.** The box can play songs on its own; that's how stored shows played music.
+- **How it's built:** a white top shell, with a bottom plate that holds the circuit board, the speaker and the
+  Wi-Fi antenna. The seal is around that bottom plate. There are no outside screws.
+- **The board:** a main processor next to EtronTech memory, a small 8-pin chip that is very likely the
+  firmware storage, and several rows of pin headers.
+- **Not public:** the schematics and block diagram are kept confidential in the filing.
+
+From the network side, the box runs **embedded Linux** (it uses `udhcpc` 1.12.1 for Wi-Fi addresses and a
+`lighttpd` 1.4.32 web server).
+
+⚠️ **Please don't open your box or flash firmware based on this.** It switches mains power (120 V), the case
+is sealed, and nobody has a safe way back yet if a firmware change goes wrong.
+
 ## The plan
 
 **Classic mode (default):** looks and works like the TapTap app you know, so there's nothing new to learn.
